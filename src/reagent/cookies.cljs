@@ -15,8 +15,8 @@
   (let [k (name k)
         content (pr-str content)]
     (if opts
-      (.set goog.net.cookies k content)
-      (.set goog.net.cookies k content (or max-age -1) path domain (boolean secure?)))))
+      (.set goog.net.cookies k content (or max-age -1) path domain (boolean secure?))
+      (.set goog.net.cookies k content))))
 
 (defn- read-value [v]
   (when v
